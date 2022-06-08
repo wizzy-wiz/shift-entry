@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Edit Remove HTML Table Row</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="shiftadd.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+
+        <style>
+            
+            .container{overflow: hidden}
+            .tab{float: bottom;}
+            .tab-2{margin-left: 50px}
+            .tab-2 input{display: block;margin-bottom: 10px}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color:#EEE;cursor: pointer}
+            
+        </style>
+        
+    </head>
+    <body>
+      <h1><div class="p-3 mb-2 bg-info text-white" align="center">Shift Entry</div></h1>
+        <div class="container">
+            <div class="tab tab-2">
+                Shift Name :<input type="text" class="form-control" name="Name" id="Name">
+                Shift Start :<input type="Time" class="form-control" name="Start" id="Start">
+                Shift End :<input type="Time" class="form-control" name="End" id="End">
+                
+                <button type="button" class="btn btn-secondary" onclick="addHtmlTableRow();"><span></span>Add</button>
+                <button type="button" class="btn btn-secondary" onclick="editHtmlTbleSelectedRow();"><span></span>Edit</button>
+                <button type="button" class="btn btn-secondary" onclick="removeSelectedRow();"><span></span>Remove</button>
+            </div>
+            <br>
+
+            <div class="table table-hover">
+                <table id="table" border="2" align="center">
+                   <thead>           
+                      <tr>
+                        <th scope="col" class="table-info">Shift Name</th>
+                        <th scope="col" class="table-info">Shift Start</th>
+                        <th scope="col" class="table-info">Shit End</th>
+                       </tr>
+                   </thead>   
+                </table>
+               
+            </div>
+
+        </div>
+
+    </body>
+    <script src="shiftadd.js"></script>
+</html>
+    
