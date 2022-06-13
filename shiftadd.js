@@ -61,7 +61,7 @@ function selectedRowToInput() {
 }
 selectedRowToInput();
 
-function editHtmlTbleSelectedRow() {
+function editHtmlTableSelectedRow() {
     var fname = document.getElementById("Name").value,
         lname = document.getElementById("Start").value,
         age = document.getElementById("End").value;
@@ -79,3 +79,26 @@ function removeSelectedRow() {
     document.getElementById("Start").value = "";
     document.getElementById("End").value = "";
 }
+
+//Event listener
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+    const value = Object.fromEntries(data.entries());
+
+    value.names = data.getAll("Name");
+    value.starts = data.getAll("Start");
+    value.ends = data.getAll("End");
+
+    console.log({ value });
+}
+
+//const data = JSON.stringify(mainpackage);
+
+const form = document.querySelector(".tab");
+form.addEventListener("submit", handleSubmit);
+
+  // module.exports(mainpackage);
+
+  

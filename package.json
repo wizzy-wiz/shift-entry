@@ -1,5 +1,9 @@
 {
     "MShiftName": "my",
     "MShiftStart": "name",
-    "MShiftEnd": "is Hiki"
+    "MShiftEnd": "is Hiki",
+    "dependencies": {
+        "express": "^4.18.1",
+        "mysql": "^2.18.1"
+    }
 }
